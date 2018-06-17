@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manual library="APP" package="Main" namespace="\">
+  <class name="viesManager" abstract="">
+    <info>
+      <version>0.1</version>
+      <build>1</build>
+      <datecreated>1446339782</datecreated>
+      <daterevised>1446339782</daterevised>
+      <extends/>
+      <implements/>
+      <throws/>
+      <title>VIES Manager and Parser</title>
+      <description>Parses the VIES website and gets company information given the VAT and state code.</description>
+      <deprecated/>
+    </info>
+    <constants/>
+    <properties>
+      <scope type="public"/>
+      <scope type="protected"/>
+      <scope type="private"/>
+    </properties>
+    <methods>
+      <scope type="public">
+        <method name="getCompanyInfo" returntype="array" static="true">
+          <description>Get company information.</description>
+          <parameters>
+            <parameter name="$vat" type="integer" defaultvalue="">
+              <description>The company vat number.</description>
+            </parameter>
+            <parameter name="$stateCode" type="string" defaultvalue="">
+              <description>The state code.</description>
+            </parameter>
+          </parameters>
+          <returndescription>An array including the 'name' and the 'address' of the company.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+      <scope type="protected"/>
+      <scope type="private">
+        <method name="curl" returntype="mixed">
+          <description>Make the cURL request to vies page.</description>
+          <parameters>
+            <parameter name="$url" type="string" defaultvalue="">
+              <description>The url value.</description>
+            </parameter>
+            <parameter name="$parameters" type="array" defaultvalue="">
+              <description>The post parameters.</description>
+            </parameter>
+          </parameters>
+          <returndescription>The cURL response.</returndescription>
+          <throws/>
+          <deprecated/>
+        </method>
+      </scope>
+    </methods>
+  </class>
+</manual>
